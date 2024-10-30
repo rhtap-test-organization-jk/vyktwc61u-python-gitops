@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vyktwc61u-python-gitops
+  description: This is GitOps manifest for vyktwc61u-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vyktwc61u-python
+    backstage.io/kubernetes-id: vyktwc61u-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vyktwc61u-python
